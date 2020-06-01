@@ -1,0 +1,8 @@
+node ('ansible'){
+    stage(scm){
+        git'https://github.com/Rajulolabhattu/ansible.git'
+    }
+    stage(build){
+        sh 'ansible-playbook -i hosts util.yml'
+    }
+}
